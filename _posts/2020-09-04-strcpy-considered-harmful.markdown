@@ -5,7 +5,7 @@ date: 2020-09-04
 categories: c-programming
 ---
 
-The inspiration for this post comes from exercise 1.3 of David Hanson's C Interfaces and Implementations.
+The inspiration for this post comes from exercise 1.3 of David Hanson's [C Interfaces and Implementations](https://amzn.to/3385vTI).
 
 <!-- TODO: Add link to book here, setup amazon referrer account -->
 
@@ -19,7 +19,7 @@ void strcpy(char *s, char *t) {
 
 There's a lot going on in these 4 lines. 
 
-The first thing to notice is the expression between the parentheses, known as the *control expression*, is an assignment and not a logical expression. 
+The first thing to notice is the expression between the parentheses of the while loop, known as the *control expression*, is an assignment and not a logical expression. 
 
 This is fine because the assignment expression actually produces a return value, which is the value of the right operand (which the left operand takes on as a result of assignment).
 
