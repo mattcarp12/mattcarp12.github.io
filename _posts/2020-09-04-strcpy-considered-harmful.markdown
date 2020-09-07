@@ -40,9 +40,9 @@ strcpy.c:2:12: warning: suggest parentheses around assignment used as truth valu
       |            ^
 ```
 
-Because comparison operators are most often used in control expressions, the compiler gives a 'safety' warning so you make sure you didn't really mean `==`.
+Because logical comparison operators are most often used in control expressions, the compiler gives a 'safety' warning to make sure you didn't really mean `==`.
 
-A nicer way to write this would make the logical comparison explicit:
+A nicer way to write this would make the logical comparison **explicit**:
 
 ```c
 void strcpy(char *s, char *t) {
