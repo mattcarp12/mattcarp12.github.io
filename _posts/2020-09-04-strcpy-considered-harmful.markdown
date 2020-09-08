@@ -2,12 +2,12 @@
 layout: post
 title: "strcpy considered harmful"
 date: 2020-09-04
-categories: c-programming
+categories: programming c
+tags: C
 ---
 
 The inspiration for this post comes from exercise 1.3 of David Hanson's [C Interfaces and Implementations](https://amzn.to/3385vTI).
 
-<!-- TODO: Add link to book here, setup amazon referrer account -->
 
 Every budding C hacker has seen the following snippet:
 ```c
