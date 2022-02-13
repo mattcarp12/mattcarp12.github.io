@@ -4,15 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+![]({{ site.url }}/assets/matt.jpg){:width="200px"}{:border-radius="50%"}
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+My name is Matt Carpenter. I am a software developer from Tampa, FL. 
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I am a co-founder and lead developer for [Canopy Vision](https://canopy-vision.ai){:target="_blank"}.
 
-
-[jekyll-organization]: https://github.com/jekyll
+My interests include networking, low-level programming, and machine learning.
