@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Karatsuba Multiplication Part 1 - Algorithm Analysis"
+title: "Karatsuba Multiplication - Algorithm Analysis"
 date: 2022-02-13
 categories: algorithms
 tags: algorithms complexity analysis
