@@ -7,7 +7,8 @@ tags: networking
 usemathjax: false
 ---
 
-This is the second in a series of blog posts detailing how to write a network stack in Go.
+This is the second in a series of blog posts detailing how to write a network stack in Go. This post will cover two core pieces of our network stack infrastructure: network stack layers and protocols.
+
 
 ## Network Layers
 
@@ -22,20 +23,22 @@ type Layer struct {
 }
 ```
 
-Thats it! Well, not really. We'll need to add a bit of functionality to this struct.
+A layer works like this: 
+- A packet is received by the layer
+- The layer inspects the packet to see what protocol it should go to
+- The layer dispatches the packet to the correct protocol
 
-Here is a diagram of the network layer abstraction:
+Remember, a packet can be both received by the outside network (Rx), or sent to the outside network (Tx), so this logic needs to be implemented both ways.
+
+Here is a diagram of our network layer abstraction:
 
 ![Network layer](/assets/Network-Layer.jpg)
 
 ### Sending and receiving packets
 
-A network layer has two jobs:
+The way we're going to send and receive packets is by using goroutines and channels. In the figure above, the circle arrow represents a goroutine, and the black funnels represent channels. Each layer has two goroutines: one for Rx and one for Tx.
 
-- Receive packets from lower layers and dispatch to the appropriate protocol
-- Receive packets from higher layers and dispatch to the appropriate protocol
-
-The way we'll send and receive packets is by using goroutines and channels. Each goroutine will read packets from a channel, and dispatch them to the appropriate protocol, based on the protocol type. We'll talk more about protocols later, but just know that protocols have send and receive channels too.
+Each goroutine will read packets from a channel, and dispatch them to the appropriate protocol, based on the protocol type. We'll talk more about protocols later, but just know that protocols have send and receive channels too.
 
 In order to do this we'll need to add a few fields to our `layer` struct. Don't worry about what an `SkBuff` is yet, we'll get to that in a later post.
 
@@ -43,8 +46,8 @@ In order to do this we'll need to add a few fields to our `layer` struct. Don't 
 // Layer v2
 type Layer struct {
     Protocols map[ProtocolType]Protocol
-    RxChan chan SkBuff
-    TxChan chan SkBuff
+    RxChan chan *SkBuff
+    TxChan chan *SkBuff
 }
 ```
 
@@ -56,7 +59,6 @@ func (layer Layer) GetProtocol(protocolType ProtocolType) (Protocol, error) {
     if !ok {
         return nil, ErrProtocolNotFound
     }
-
     return protocol, nil
 }
 
@@ -134,7 +136,7 @@ type Protocol interface {
 }
 ```
 
-Now when a protocol processes a packet, it'll need to send the packet to the next layer (either up or down the stack). So we'll need two more methods in the protocol struct.
+When a protocol processes a packet, it'll need to send the packet to the next layer (either up or down the stack). So we'll need two more methods to do that:
 
 ```go
 // Protocol v3
