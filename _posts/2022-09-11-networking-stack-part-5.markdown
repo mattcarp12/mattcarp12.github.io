@@ -121,4 +121,4 @@ As you can see, we're using basic socket programming to implement our Socket API
 
 So all our Socket API is is really just a library for making requests to this server and reading responses.
 
-I hope you've found this series on userspace networking informative. This project was very enjoyable and enlightening for me and I suggest all backend software engineers to dig deep on socket programming.
+I hope you've found this series on userspace networking informative. This project was very enjoyable and enlightening for me and I suggest all backend software engineers to dig deep on socket programming!
