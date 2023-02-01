@@ -9,6 +9,8 @@ usemathjax: false
 
 In this second post in the series, we will create the first implementation of our compiler, which will produce an actual binary program. The language will be trivial, but will serve as the foundation for later iterations (remember we're using the incremental approach to compiler construction).
 
+Here is the branch for this post: [https://github.com/mattcarp12/maml/tree/constants](https://github.com/mattcarp12/maml/tree/constants).
+
 <!-- // Make a compiler diagram here -->
 
 ## Initial Language
