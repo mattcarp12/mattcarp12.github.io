@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Write a Compiler in Ocaml - Part 2: First Steps"
+title: "Write a Compiler in Ocaml - Part 2: First Program"
 date: 2023-01-31
 categories: compiler
 tags: compiler
