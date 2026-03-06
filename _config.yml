@@ -6,7 +6,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Carpe code
+title: mattcarp12.github.io
 author:
   name: Matt Carpenter
   email: mattcarp88@gmail.com
@@ -14,7 +14,7 @@ author:
 description: >- # this means to ignore newlines until "baseurl:"
   Seize the code!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://carpecode.dev" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://mattcarp12.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
@@ -25,5 +25,5 @@ minima:
   date_format: "%b %-d, %Y"
   social_links:
     github:  mattcarp12
-    linkedin: mattcarp88
-    youtube_channel: UCE0fiXZHDrKsFfvoIHf4q9g
+    linkedin: matthewrcarpenter
+    #youtube_channel: UCE0fiXZHDrKsFfvoIHf4q9g

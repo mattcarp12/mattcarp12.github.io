@@ -5,6 +5,7 @@ date: 2023-01-29
 categories: compiler
 tags: compiler
 usemathjax: false
+published: false
 ---
 
 This article is the fist in the series "Write a Compiler in Ocaml". This article will be an introduction, including discussion of initial decisions that need to be made before undertaking a new comiler project.

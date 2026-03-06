@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Heap data structure using Go generics"
-date: 2022-08-09
+date: 2022-11-09
 categories: programming
 tags: programming golang generics
 usemathjax: false

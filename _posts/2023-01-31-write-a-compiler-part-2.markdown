@@ -5,6 +5,7 @@ date: 2023-01-31
 categories: compiler
 tags: compiler
 usemathjax: false
+published: false
 ---
 
 In this second post in the series, we will create the first implementation of our compiler, which will produce an actual binary program. The language will be trivial, but will serve as the foundation for later iterations (remember we're using the incremental approach to compiler construction).
