@@ -1,29 +1,3 @@
-# Welcome to Jekyll!
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: mattcarp12.github.io
-author:
-  name: Matt Carpenter
-  email: mattcarp88@gmail.com
-
-description: >- # this means to ignore newlines until "baseurl:"
-  Seize the code!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://mattcarp12.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
-# Build settings
-theme: minima
-plugins:
-  - jekyll-feed
-
-minima:
-  date_format: "%b %-d, %Y"
-  social_links:
-    github:  mattcarp12
-    linkedin: matthewrcarpenter
-    #youtube_channel: UCE0fiXZHDrKsFfvoIHf4q9g
+title: Carpe Code
+description: Seize the code!
+theme: jekyll-theme-primer
