@@ -60,7 +60,7 @@ func (wp WorkPool[P, R]) Run(ps []P) []R {
 
 Here is an example of using this code to make concurrent http requests. I recommend you try this out for yourself with various values for the goroutine pool size and see the results.
 
-```golang
+```go
 package main
 
 import (
